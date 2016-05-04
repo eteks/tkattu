@@ -1,0 +1,345 @@
+body{   margin:0px;   padding:0px; }
+P { font-size: 1em; margin: 0px; }
+FORM { margin: 0px; display: inline; }
+INPUT { font-family: Tahoma, Arial, Verdana; border: 1px solid #666666; font-size: 12px; }
+TEXTAREA { font-family: Tahoma, Arial, Verdana; border: 1px solid #666666; font-size: 12px; }
+SELECT { font-family: Tahoma, Arial, Verdana; border: 1px solid #666666; font-size: 12px; }
+.checkbox{border: 0px;}
+.noneborder{border: 0px;}
+.tahoma11
+{
+    font-family:Tahoma, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    font-weight:normal;
+    color:#4A4A4A;
+}
+
+.tahomabold
+{
+    font-family:Tahoma, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    font-weight:bold;
+    color:#3C3C3C;
+}
+
+.buttons
+{
+    /*width: 52px;*/
+    height:22px;
+    font-family:Tahoma, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    font-weight:bold;
+    color:#FFFFFF;
+    border:#191919 solid 1px;
+    background-color:#4F4F4F;
+    text-decoration:none;
+
+}
+.buttons a
+{
+    width: 52px;
+    height:22px;
+    color:#FFFFFF;
+    border:#191919 solid 1px;
+    background-color:#4F4F4F;
+    text-decoration:none;
+}
+
+.buttons a:hover
+{
+    width: 52px;
+    height:22px;
+    color:#FFFFFF;
+    border:#191919 solid 1px;
+    background-color:#4F4F4F;
+    text-decoration:none;
+}
+
+.innerbox
+{
+    height:18px;
+    font-family:Tahoma, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color:#4A4A4A;
+    border:#9C9A9A solid 1px;
+    padding:5px 0px 0px 5px;
+}
+.tahoma12blacknormal 
+{
+    font-family: Tahoma, Arial, Verdana;
+    font-size: 12px; font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #000000;
+    text-decoration: none;
+}
+
+/* added by kamal on 29-07-2008 03:03 PM*/
+.tahoma12yellowbold a 
+{
+   color:#FFFFFF;
+   font-family:Tahoma,Arial,Verdana;
+   font-size:12px;
+   font-style:normal;
+   font-variant:normal;
+   font-weight:bold;
+   line-height:normal;
+   text-decoration:none;
+   text-transform:none;
+}
+.tahoma12yellowbold a:hover
+{
+   color:#D3A311;
+   font-family:Tahoma,Arial,Verdana;
+   font-size:12px;
+   font-style:normal;
+   font-variant:normal;
+   font-weight:bold;
+   line-height:normal;
+   text-decoration:underline;
+   text-transform:none;
+}
+.sidelinks a 
+{
+   color:#FFFFFF;
+   font-family:Tahoma,Arial,Verdana;
+   font-size:12px;
+   font-style:normal;
+   font-variant:normal;
+   font-weight:bold;
+   line-height:normal;
+   text-decoration:none;
+   text-transform:none;
+}
+.sidelinks a:hover
+{
+   color:#D3A311;
+   font-family:Tahoma,Arial,Verdana;
+   font-size:12px;
+   font-style:normal;
+   font-variant:normal;
+   font-weight:bold;
+   line-height:normal;
+   text-decoration:none;
+   text-transform:none;
+}
+.sidelinks_selected a 
+{
+   color:#D3A311;
+   font-family:Tahoma,Arial,Verdana;
+   font-size:12px;
+   font-style:normal;
+   font-variant:normal;
+   font-weight:bold;
+   line-height:normal;
+   text-decoration:none;
+   text-transform:none;
+}
+.tahoma18yellowbold
+{
+   color:#D3A311;/* FFD249 */
+   font-family:Verdana;
+   font-size:18px;
+   font-weight:bold;
+   line-height:normal;
+   
+}
+.tahoma18whitebold
+{ 
+   color:#FFFFFF;
+   font-family:Verdana;
+   font-size:18px;
+   font-weight:bold;
+   line-height:normal;
+   
+}
+.tahoma11whitebold 
+{
+   color:#FFFFFF;
+   font-family:Tahoma,Arial,Verdana;
+   font-size:11px;
+   font-style:normal;
+   font-variant:normal;
+   font-weight:bold;
+   line-height:normal;
+   text-decoration:none;
+   text-transform:none;
+}
+.tahoma12whitebold 
+{
+   color:#FFFFFF;
+   font-family:Tahoma,Arial,Verdana;
+   font-size:12px;
+   font-style:normal;
+   font-variant:normal;
+   font-weight:bold;
+   line-height:normal;
+   text-decoration:none;
+   text-transform:none;
+}
+
+.tahoma12blackbold 
+{
+    font-family: Tahoma, Arial, Verdana;
+    font-size: 11px; 
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+    font-variant: normal;
+    text-transform: none;
+    color: #000000;
+    text-decoration: none;
+}
+
+.tahoma11blacknormal 
+{
+    font-family: Tahoma, Arial, Verdana;
+    font-size: 11px; 
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #000000;	
+    text-decoration: none;
+}
+
+.tahoma11blacknormal a 
+{
+    font-family: Tahoma, Arial, Verdana;
+    font-size: 11px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.tahoma10rednormal 
+{
+    font-family: Tahoma, Arial, Verdana;
+    font-size: 10px; 
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #FF0000;
+    text-decoration: none;
+}
+.tahoma11rednormal 
+{
+    font-family: Tahoma, Arial, Verdana;
+    font-size: 11px; 
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #FF0000;
+    text-decoration: none;
+}
+.tahoma12rednormal 
+{
+    font-family: Tahoma, Arial, Verdana;
+    font-size: 12px; 
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+    font-variant: normal;
+    text-transform: none;
+    color: #FF0000;
+    text-decoration: none;
+}
+.requiredfield 
+{
+    font-family: Tahoma, Arial, Verdana;
+    font-size: 10px; 
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #FF0000;
+    text-decoration: none;
+}
+
+.controlbox
+{
+	font-family:Tahoma, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#4A4A4A;
+	width:116px;
+	height:110px;
+	text-decoration:none;
+}
+
+.controlbox a
+{
+	font-family:Tahoma, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#4A4A4A;
+	display:block;
+	background-color:#F9F9F9;
+	border:#BBBBBB solid 1px;
+	width:126px;
+	height:90px;
+	padding:20px 0px 0px 0px;
+	text-decoration:none;
+}
+
+.controlbox a:hover
+{
+	font-family:Tahoma, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#3F371F;
+	font-weight:normal;
+	/*background-color:#FFDBDB;
+	border:#DE5E5E solid 1px;*/
+    background-color:#EFE0B3;
+	border:#000000 solid 1px;
+	display:block;
+	width:126px;
+	height:87px;
+	padding:23px 0px 0px 0px;
+	text-decoration:none;
+}
+.titlerow {
+background-image: url('../images/tr_bg.jpg');
+height:25px;
+}
+.tbl_border {
+/*border:1px solid #cfcfcf;*/
+border:1px solid #AF999E;
+background-color:#CFCFCF;
+}
+
+.navigation {
+    font-family: Tahoma, Arial, Verdana;
+    font-size: 13px; 
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+    font-variant: normal;
+    text-transform: none;
+    color: #000000;
+    text-decoration: none;
+}
+/* By Kamal 29-09-08*/
+
+a.survey_button
+{
+    text-decoration:none;
+	color:#000000;
+    font-size:11px;
+    font-family:Tahoma,Arial,Verdana;
+}
+
+a.survey_button:hover
+{
+	text-decoration:underline
+}

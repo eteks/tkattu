@@ -1,0 +1,1 @@
+[08-Jul-2009 20:52:01] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Lost connection to MySQL server at 'reading initial communication packet', system error: 110 in /home/atomi30/public_html/HMS/admin/includes/functions/database.php on line 9

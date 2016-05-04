@@ -1,0 +1,189 @@
+body{ 
+    margin:0px; padding:0px;
+    font-family:"Trebuchet MS",arial;   
+    font-size:11px;
+    color:#777;
+}
+
+.normaltext { 
+    font-family:"Trebuchet MS",arial;
+    font-size:11px;
+    color:#777;
+}
+
+.drawtext { 
+    font-size:12px; color:#555; border:1px solid #999; padding:2px
+}
+/* By Kamal */
+.requiredfield 
+{
+    font-family:"Trebuchet MS",arial;   
+    font-size: 10px; 
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #FF0000;
+    text-decoration: none;
+}
+.tahoma10rednormal 
+{
+    font-family:"Trebuchet MS",arial;   
+    font-size: 10px; 
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #FF0000;
+    text-decoration: none;
+}
+
+.tahoma12rednormal 
+{
+    font-family:"Trebuchet MS",arial;   
+    font-size: 12px; 
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+    font-variant: normal;
+    text-transform: none;
+    color: #FF0000;
+    text-decoration: none;
+}
+
+.tahoma12blackbold 
+{
+    font-family:"Trebuchet MS",arial;
+    font-size: 11px; 
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+    font-variant: normal;
+    text-transform: none;
+    color: #000000;
+    text-decoration: none;
+}
+.tahoma11blacknormal 
+{
+    font-family:"Trebuchet MS",arial;   
+    font-size: 11px; 
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #000000;	
+    text-decoration: none;
+}
+
+.verdanablack {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+}
+/* End of new style*/
+
+a{color:black; text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+table{
+    border-collapse:collapse;
+    text-align:left;
+}
+
+td, th{
+    vertical-align:top;
+    text-align:left;
+}
+
+.logo{
+    padding:8px;
+}
+
+.data{
+    padding: 0px 5px 0px 5px;
+}
+.clientlogo{
+    padding:8px;
+}
+
+.gride_header{
+    background-image:url('../images/bg_top_menu.gif');
+    color:white;
+}
+
+.gride_header2{
+    background-image:url('../images/bg_top2.gif');
+    background:#0c5793;
+    color:white;
+    font-size:12px;
+}
+
+
+.title{
+    font-size:15;
+    padding:3px 0px 4px 8px;
+}
+
+.menu{
+    padding:6px 8px 0px 0px;
+    font-size:11px;
+    text-align:right;
+    font-weight:bold;
+}
+
+.menu a{color:white;text-decoration:none;}
+.menu a:hover{color:#0c5793;}
+
+.left_menu_td{width:175px; background-image:url('../images/bg_left_menu.gif');}
+
+.left_menu{height:25px; width:140px; text-align:left; padding:5px 3px 0px 10px; margin-left:10px; margin-bottom:2px; border-bottom:1px solid #cbcbcb; border-bottom-style:dashed;font-size:12px;}
+
+.left_menu a{ color:#666; font-weight:bold;}
+.left_menu a:hover{ color:#0c5793; font-weight:bold; padding-right:10px;background-image:url('../images/arrow.gif'); background-repeat:no-repeat; background-position:95% 5px}
+
+.active{color:#0c5793 !important; padding-right:10px;background-image:url('../images/arrow.gif'); background-repeat:no-repeat; background-position:95% 5px}
+
+.textbox{
+    font-family:Tahoma; font-size:12px; color:#555; border:1px solid #999; padding:2px;
+}
+
+.btn_style1{
+    font-size:11px; color:#e1e1e1; background:#666666; border:1px solid #000; padding:1px 3px 1px 3px;
+}
+
+.right{ float:right; padding-right:10px;}
+
+.gride1{}
+.gride1 td{background:#f5f5f5; padding:4px 0px 4px 5px; border-bottom:1px solid #ebebeb;color:#777777;
+font-family:"Trebuchet MS",arial;
+font-size:11px;}
+
+.gride2{}
+.gride2 td{padding:4px 0px 4px 5px; border-bottom:1px solid #ebebeb;color:#777777;
+font-family:"Trebuchet MS",arial;
+font-size:11px;}
+
+.width_5{width:5%; padding:4px 0px 4px 4px;}
+.width_10{width:10%; padding:4px 0px 4px 4px;}
+.width_15{width:15%; padding:4px 0px 4px 4px;}
+.width_20{width:20%; padding:4px 0px 4px 4px;}
+.width_30{width:30%; padding:4px 0px 4px 4px;}
+.width_40{width:40%; padding:4px 0px 4px 4px;}
+.width_50{width:50%; padding:4px 0px 4px 4px;}
+.width_60{width:60%; padding:4px 0px 4px 4px;}
+.width_70{width:70%; padding:4px 0px 4px 4px;}
+.width_80{width:80%; padding:4px 0px 4px 4px;}
+.width_90{width:90%; padding:4px 0px 4px 4px;}
+.width_100{width:100%; padding:4px 0px 4px 4px;}
+background-image:url('../images/bg_menu.gif');
+
+

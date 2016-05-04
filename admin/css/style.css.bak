@@ -1,0 +1,190 @@
+body{
+ margin-left:5px;
+ margin-left:5px;
+ margin-top:2px;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:11px;
+}
+td{
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:12px;
+ color:#000000;
+}
+.admin{
+ font-family:arial;
+ font-size:30px;
+ color:#e92d00;
+}
+.heading_light_blue{
+ font-family:arial;
+ font-size:15px;
+ color:#EA3B02;
+}
+.wel{
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:12px;
+ color:#FFFFFF;
+ font-weight:bold;
+}
+a.wel{
+ color:#FFFFFF;
+ font-weight:bold;
+ text-decoration:none;
+}
+a.wel:hover{
+ color:#FFFFFF;
+ font-weight:bold;
+ text-decoration:underline;
+}
+.leftnav{
+background-color:#fffee5;
+border:1px solid #e8e4b2;
+}
+div.menu a {
+  display:block;
+  width:165px;
+  height:23px;
+  line-height:23px;
+  padding-left:5px;
+  padding-right:5px;
+  float:left;
+  background:tranparent url(../images/arrow_up.gif) no-repeat right;
+  color:#FFFFFF;
+  font-size:12px;
+  text-decoration:none;
+  font-weight:bold;
+ }
+  div.menu a:hover{
+  background:tranparent url(../images/arrow_up.gif) no-repeat right;
+  color:#fff;
+ }
+ a.sublink{
+ height:22px;
+ line-height:22px;
+ background : transparent url(../images/listicon.gif) no-repeat 0px 5px;
+ color:#555555;
+ text-decoration:none;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:11px;
+ padding-left:15px;
+ }
+  a.sublink:hover{
+ height:22px;
+ line-height:22px;
+ background : transparent url(../images/listicon.gif) no-repeat 0px 5px;
+ color:#eb3d00;
+ text-decoration:underline;
+ }
+
+ .input{
+     background : white url(images/input.gif) repeat-x;
+     text-indent:2px;
+    }
+    td{
+        font-size:14px;
+        font-family:Arial, Helvetica, sans-serif;
+        color:#FFFFFF;
+        font-weight:bold;
+    }
+
+
+.table_outer_border {
+    background-attachment: fixed;
+    background-image: url(images/header_bit.jpg);
+    background-repeat: repeat-x;
+    background-position: left top;
+    border: 5px solid #EB5300;
+}
+
+.show{
+     color:#ff9500;
+     font-weight:bold;
+     font-size:12px;
+ } 
+ .ntab{
+     border:1px solid #cacaca;
+    border-collapse:collapse;
+ }
+ .ntab th{
+    background : #c2c1c1 url(../images/tabth.gif) repeat-x left;
+    border-collapse:collapse;
+    border:1px solid #e6e6e6;
+    color:#8d685c;
+    font-size:12px;
+    font-weight:bold;
+    text-align:justify;
+    padding-left:5px;
+ }
+  .ntab td{
+    border-collapse:collapse;
+    padding-left:5px;
+    border:1px solid #e6e6e6;
+ }
+ .bg{
+     background :#efefef;
+ }
+ 
+
+.tahoma10rednormal {font-family: Tahoma, Arial, Verdana;font-size: 10px; font-style: normal;    line-height: normal;font-weight: normal;font-variant: normal;text-transform: none;color: #FF0000;    text-decoration: none;}
+.tahoma11rednormal {font-family: Tahoma, Arial, Verdana;font-size: 11px; font-style: normal;    line-height: normal;font-weight: normal;font-variant: normal;text-transform: none;color: #FF0000;    text-decoration: none;}
+.tahoma11blacknormal {font-family: Tahoma, Arial, Verdana;font-size: 11px; font-style: normal;    line-height: normal;font-weight: bold;font-variant: normal;text-transform: none;color: #424242;    text-decoration: none;}
+.tahoma11blacknormal a {font-family: Tahoma, Arial, Verdana;font-size: 11px; font-style: normal; line-height: normal;font-weight: normal;font-variant: normal;text-transform: none;color: #000000; text-decoration: underline;}
+.tahoma11blackbold {font-family: Tahoma, Arial, Verdana;font-size: 11px; font-style: normal;    line-height: normal;font-weight: bold;font-variant: normal;text-transform: none;color: #000000;    text-decoration: none;}
+.tahoma12blacknormal {font-family: Tahoma, Arial, Verdana;font-size: 12px; font-style: normal;    line-height: normal;font-weight: normal;font-variant: normal;text-transform: none;color: #000000;    text-decoration: none;}
+.tahoma12blackbold {font-family: Tahoma, Arial, Verdana;font-size: 12px; font-style: bold;    line-height: normal;font-weight: bold;font-variant: normal;text-transform: none;color: #000000;    text-decoration: none;}
+.tahoma14blacknormal {font-family: Tahoma, Arial, Verdana;font-size: 14px; font-style: normal;    line-height: normal;font-weight: normal;font-variant: normal;text-transform: none;color: #000000;    text-decoration: none;}
+.tahoma11whitebold {font-family: Tahoma, Arial, Verdana;font-size: 11px;font-style: normal;line-height: normal;font-weight: bold;font-variant: normal;text-transform: none;color: #FFFFFF;text-decoration: none;}
+.tahoma16blackbold {font-family: Tahoma, Arial, Verdana;font-size: 16px;font-style: normal;line-height: normal;font-weight: bold;font-variant: normal;text-transform: none;color: #000000;text-decoration: none;}
+.tahoma16whitebold {font-family: Tahoma, Arial, Verdana;font-size: 16px;font-style: normal;line-height: normal;font-weight: bold;font-variant: normal;text-transform: none;color: #FFFFFF;text-decoration: none;}
+.tahoma16whitenormal {font-family: Tahoma, Arial, Verdana;font-size: 16px;font-style: normal;line-height: normal;font-weight: normal;font-variant: normal;text-transform: none;color: #FFFFFF;text-decoration: none;}
+.tahoma16blackbold2 {font-family: Tahoma, Arial, Verdana;font-size: 14px;font-style: normal;line-height: normal;font-weight: bold;font-variant: normal;text-transform: none;color: #000000;text-decoration: none;}
+ 
+ .padding_left {
+    padding-left: 4px;
+}
+
+.cssimg{
+     background : #f7941d Url(../images/cssbut.gif) repeat-x left top ;
+    text-align:center;
+    border:1px solid #ee890f;
+    color:#ffffff;
+    font-weight:bold;
+    font-size:12px;
+    text-transform:capitalize;
+    height:23px;
+    white-space:nowrap;
+    line-height:15px;    
+ }
+
+ .buttons
+{
+
+    height:22px;
+    font-family:Tahoma, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    font-weight:bold;
+    color:#FFFFFF;
+    border:#E6891D solid 1px;
+    background-color:#F5D3AD;
+    text-decoration:none;
+
+}
+
+ .buttons234
+{
+
+    height:22px;
+    font-family:Tahoma, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    font-weight:bold;
+    color:#FFFFFF;
+    border:#E6891D solid 1px;
+    background-color:#EDAA30;
+    text-decoration:none;
+
+}
+
+//30-01-09
+.btn_style1{
+    font-size:11px; color:#e1e1e1; background:#666666; border:1px solid #000; padding:1px 3px 1px 3px;
+}

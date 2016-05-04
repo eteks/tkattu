@@ -1,0 +1,396 @@
+@charset "utf-8";
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #e5e0c6;
+	
+}
+a.menulink:link {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #993399;
+	color: #000000;
+	text-decoration: underline;
+}
+a.menulink:visited {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: underline;
+}
+a.menulink:hover {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #ff0003;
+	text-decoration: underline;
+}
+a.menulink:active {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: underline;
+}
+.tahoma12 {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+	text-align: justify;
+}
+.constantbg {
+	background-image: url(../images/menu_gradient.jpg);
+	background-repeat: repeat-x;
+	height: 65px;
+	width: auto;
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #FFFFFF;
+	background-position: left top;
+}
+.tahomasmall {
+	font-family: Tahoma;
+	font-size: 15px;
+	color: #000000;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+}
+.gradientbg {
+	background-image: url(../images/grey_grad.jpg);
+	background-repeat: repeat-x;
+	background-position: top;
+	height: 8px;
+	padding: 5px 25px;
+  text-align: right;
+	width: auto;
+}
+a.copyrights:link {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #993399;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.copyrights:visited {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.copyrights:hover {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #00FFFF;
+	text-decoration: underline;
+}
+a.copyrights:active {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.tahomawhite12 {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+.input {
+	width: 100px;
+	font-family: Verdana;
+	font-size: 11px;
+}
+.verdanablack {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+        font-weight: bold;
+	text-decoration: none;
+}
+.verdanablack_bill {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+
+	text-decoration: none;
+}
+.verdanabold {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+}
+.verdanabrown {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #ae4d07;
+	text-decoration: none;
+}
+.verdana13 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+}
+.menubg {
+	background-position: top;
+	height: 40px;
+	width: auto;
+        background-image: url(../images/menu_grad.jpg);
+background-color: #6E9418;
+	background-repeat: repeat-x;
+       
+}
+option {
+	height: 15px;
+}
+.yellowbg {
+	background-image: url(../images/yellow_grad.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 50px;
+	width: 129px;
+}
+a.tahoma11:link {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #993399;
+	color: #3a6997;
+	text-decoration: underline;
+}
+a.tahoma11:visited {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #3a6997;
+	text-decoration: underline;
+}
+a.tahoma11:hover {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #A00000;
+	text-decoration: underline;
+}
+a.tahoma11:active {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #3a6997;
+	text-decoration: underline;
+}
+.tahomasmallbold {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+}
+.tahoma {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: normal;
+}
+.mainbg {
+	background-position: center top;
+	height: 384px;
+	width: 707px;
+	background-image: url(../images/main_bg.jpg);
+	background-repeat: no-repeat;
+}
+.servicebg {
+
+	background-position: center top;
+	height: 384px;
+	width: 707px;
+	background-image: url(../images/services_bg.jpg);
+	background-repeat: no-repeat;
+}
+.selectinput {
+	width: 125px;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #3A6997;
+	height: 20px;
+}
+.selectinput1 {
+	width: 100px;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #3A6997;
+	height: 20px;
+}
+.selectinput2 {
+	width: 55px;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #3A6997;
+	height: 20px;
+}
+.tableborder {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #A8B158;
+	border-right-color: #A8B158;
+	border-bottom-color: #A8B158;
+	border-left-color: #A8B158;
+}
+a.submenu:link {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	height: 30px;
+	width: 103px;
+	background-image: url(../images/rollover1.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 7px;
+	float: left;
+	padding-bottom: 0px;
+}
+a.submenu:visited {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	width: 103px;
+	background-image: url(../images/rollover1.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 7px;
+	float: left;
+	height: 30px;
+	padding-bottom: 0px;
+}
+
+a.submenu:hover {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	height: 30px;
+	width: 103px;
+	background-image: url(../images/rollover2.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 7px;
+	float: left;
+	padding-bottom: 0px;
+}
+a.submenu:active {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	height: 30px;
+	width: 103px;
+	background-image: url(../images/rollover1.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 7px;
+	float: left;
+	padding-bottom: 0px;
+}
+.inputCopy {
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	width: 125px;
+	color: #3A6997;
+	height: 15px;
+}
+
+.inputCopy1 {
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	width: 100px;
+	color: #3A6997;
+	height: 20px;
+}
+
+.inventorybg {
+	background-position: center top;
+	height: 164px;
+	width: 921px;
+	background-image: url(../images/inventory_bg.jpg);
+	background-repeat: no-repeat;
+}
+.reservationbg {
+	background-position: center top;
+	height: 437px;
+	width: 718px;
+	background-image: url(../images/reservation_bg.jpg);
+	background-repeat: no-repeat;
+}
+.textarea {
+	width: 125px;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #3A6997;
+	height: 40px;
+}
+.pred
+{
+    color:red;
+}
