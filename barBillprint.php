@@ -82,7 +82,10 @@
             $printer -> text(str_pad("TABLE NO: Table".$tbl_name[0]."(".$tablename.")",33)) ; // print table details
 			$printer -> setJustification(Printer::JUSTIFY_RIGHT);// printer alignment right
 			$printer -> text("S/I : ".$supplier."\n");// print suplier details
-			$printer -> text( "No of Persons: ".$fetchbill['no_of_person']."\n") ; // print no of person
+			$printer -> text(str_pad("No of Persons: ".$fetchbill['no_of_person'],33)); // print no of person
+			$printer -> text("KOT NO :".$cardid."\n");
+		}else{
+			$printer -> text("KOT NO :".$cardid."\n");
 		}
 		$printer -> selectPrintMode(); //reset printer mode
 		$printer -> text("------------------------------------------\n");
@@ -170,11 +173,11 @@
 	    	while ($menu_categ_v_tax = db_fetch_array($menu_records_v_tax)){
 	    		$printer -> text(str_pad("VAT".$table_T['vat_tax']."%",27));
 	         	$v_tax_amt =$menu_categ_v_tax['price_value'];
-	         	$printer -> text(str_pad($v_tax_amt,10));
+	         	$printer -> text(str_pad(round($v_tax_amt,2),10));
 	            $v_tax=$table_T['vat_amt'];  
-				$printer -> text(str_pad($v_tax,10));                      
+				$printer -> text(str_pad(round($v_tax,2),10));                      
 				$total_v= $v_tax_amt+$v_tax;
-				$printer -> text($total_v."\n");                
+				$printer -> text(round($total_v,2)."\n");                
 			} 
 		}
 		if(!$parcel_status){        
@@ -185,12 +188,12 @@
 				$menu_records_s_tax = db_query ($hms_info_fetch_tax_ser);
 		    	while ($menu_categ_s_tax = db_fetch_array($menu_records_s_tax)){
 		        	$s_tax_amt =$menu_categ_s_tax['price_value']; 
-					$printer -> text(str_pad("CST". $table_s['service_tax']."%(".$s_tax_amt.")",27));       
+					$printer -> text(str_pad("CST". $table_s['service_tax']."%(".round($s_tax_amt,2).")",27));       
 		  			$printer -> text(str_pad("0.00",10));
 		    		$s_tax=$s_tax_amt*($table_s['service_tax']/100.0);
-					$printer -> text(str_pad($s_tax,10));                    
+					$printer -> text(str_pad(round($s_tax,2),10));                    
 					$total_s=$s_tax; 
-					$printer -> text($total_s."\n");                
+					$printer -> text(round($total_s,2)."\n");                
 				} 
 			}
 		}

@@ -761,8 +761,9 @@
                         $('#tableid').val('');
                         $('#suppliers').val('');
                         $('#noofpersons').val('');
-                        alert($('#noofpersons').val());
+                    
                         $('.getcategory').prop("checked", false);
+                        $('#ordertype').focus()
                     } else
                         alert("Please Generate the Order Entry");
                 }

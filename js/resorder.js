@@ -994,6 +994,7 @@ function open_bill(cart_id, chairs, ordertype) {
             $("#divmiddlecontent").html(result);
             $("#bill_row").show();
             $('#itemcode').focus();
+            window.scrollTo(0, 1090);
 
         }
     });

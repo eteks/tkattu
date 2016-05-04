@@ -109,7 +109,9 @@
        
 		$printer -> text("D/T : ".$datetime."\n") ;
 		if($ordertype=='dine'){
-			$printer -> text("S/I : ".$supplier." Dept : KOT\n") ;
+			$printer -> text("S/I : ".$supplier." Dept : KOT".$cartid."\n") ;
+		}else{
+			$printer -> text("Dept : KOT".$cartid."\n") ;
 		}
 		$printer -> text("------------------------------------------\n");
 
