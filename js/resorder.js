@@ -975,7 +975,7 @@ function print_nocashbill(chairs, card_id, accountsession) {
     document.getElementById('bill_row').style.display = 'none';
     // window.open("nocashbillprint.php?chairs=" + chairs + "&card_id=" + card_id + "&accountsession=" + accountsession, '_blank');
     $.ajax({
-            type: 'POST',
+            type: 'GET',
             url: 'nocashbillprint.php',
             data: "chairs=" + chairs + "&card_id=" + card_id + "&accountsession=" + accountsession,
             success: function(data) {

@@ -38,7 +38,7 @@
 	require 'printer/autoload.php';
 	use Mike42\Escpos\Printer;
 	use Mike42\Escpos\PrintConnectors\NetworkPrintConnector;
-	$connector = new NetworkPrintConnector("192.168.2.100", 9100);
+	$connector = new NetworkPrintConnector(PRINTER_IP, 9100);
 	
 	// end printer configuration
 	if(db_num_rows($account_bill_query)>0){
