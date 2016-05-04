@@ -47,6 +47,7 @@
   			db_query("UPDATE " .TABLE_HMS_RESTAURANT_ORDER_DETAILS." SET last_cancel_quantity=0 WHERE order_id='$orderidval' ");
 		}
 		$wherecon = " AND cancel_status=1 AND depart_status=0";
+		$bill_format = "KOT Cancel";
 	}
 	else if($action=='deptbill'){
 		$select  ="SELECT order_id,order_quantity,bill_id,order_cart_id,last_cancel_quantity,depart_id,menuid, parcel_status, no_of_person FROM ".TABLE_HMS_RESTAURANT_ORDER_DETAILS." WHERE  order_cart_id = '$cartid' ";
@@ -63,6 +64,16 @@
   					db_query("INSERT INTO hms_order_qty_flow SET bill_id='".$fetch['bill_id']."',itemcancel='".$fetch['itemcancel']."',last_cancel_quantity='".$fetch['itemcancel']."',depart_id='".$fetch['depart_id']."',order_cart_id='".$fetch['order_cart_id']."', menuid='".$fetch['menuid']."',order_id='".$fetch['order_id']."', order_quantity='".$finalqty."', parcel_status='".$fetch['parcel_status']."'");
 		}
 		$wherecon = " AND itemcancel=0 AND depart_status=0";
+		if($ordertype=='dine')
+			$bill_format = "KOT Order";
+		else
+			$bill_format = "KOT Parcel";
+	}
+	else if($action=='cancelbill'){
+		if($ordertype=='dine')
+			$bill_format = "Invoice Cancel";
+		else
+			$bill_format = "Invoice Parcel Cancel";		
 	}
 
 //KOT
@@ -79,6 +90,7 @@
 		$hotel_name = $fet_parameter['hms_hotel_name'];
 		$printer -> selectPrintMode(Printer::MODE_EMPHASIZED);
 		$printer -> setJustification(Printer::JUSTIFY_CENTER);
+		$printer -> text($bill_format."\n");
 		$printer -> text($hotel_name."\n");
 		$printer -> setJustification();
 		$printer -> selectPrintMode();
