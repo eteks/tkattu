@@ -839,14 +839,13 @@
         });
 
 
-        $('.accsession').on('click', function() {
+$('.accsession').on('click', function() {
             var session = $(this).val();
             $('.accsession').prop("checked", false);
             $(this).prop("checked", true);
             if (session == 'E') {
                 if (confirm("Are you sure you want to end today's Order Entry !") == true) {
                     if (confirm("Conform again  !") == true) {
-
                         $.ajax({
                             type: 'POST',
                             url: 'checking.php',
@@ -863,7 +862,109 @@
                                         var sessionnextid = sessionnext.toLowerCase();
                                         $('#' + sessionnextid).prop("checked", true);
                                     }
+                                }
+                                else{
+                                  $.ajax({
+                                  type: 'POST',
+                                  url: 'sms_sending.php',
+                                  data: {'session':session},
+                                  success: function(data) {
+                                    status = true;
+                                    data = data.split('#####');
+                                    data[0] = JSON.parse(data[0]);
+                                    if (data[0] == ''){
+                                      status = '';
+                                    }
+                                    $.each(data[0], function(i){
+                                      if(data[0][i].status == "open")  
+                                        status = false;
+                                    });
+                                    data[1] = JSON.parse(data[1]);
+                                    $.each(data[1], function(i){
+                                      if(data[1][i].status == "open")  
+                                        status = false;
+                                    });
+                                      if(status == "true"){
+                                          var d = new Date();
+                                          var month = new Array();
+                                          month[0] = "Jan";
+                                          month[1] = "Feb";
+                                          month[2] = "Mar";
+                                          month[3] = "Apr";
+                                          month[4] = "May";
+                                          month[5] = "Jun";
+                                          month[6] = "Jul";
+                                          month[7] = "Aug";
+                                          month[8] = "Sep";
+                                          month[9] = "Oct";
+                                          month[10] = "Nov";
+                                          month[11] = "Dec";
+                                          var n = month[d.getMonth()];
+                                          var lenth = data[0].length;
+                                          var date = data[0][0].orde_close_date;
+                                          var spilted_date = date.split('-');
+                                          var combined_date = spilted_date[2]+n+spilted_date[0];
+                                          var amount = 0.00;
+                                          $.each(data[0], function(i){
+                                            amount += parseFloat(data[0][i].total_amount);
+                                          });
+                                          var sess = 'Dinner';
+                                          var no_of_bils = data[0][0].bill_id +'to'+data[0][lenth-1].bill_id;
+                                          var message = sess+'\nDate :'+combined_date+';\nNo of bills:'+no_of_bils+';\nAmount Collection : Rs'+amount;
+                                         $.ajax({
+                                             type: 'GET',
+                                          url: 'http://bulksms.blackholesolution.com/app/smsapi/index.php',
+                                          data: {'key':'55113155e7e2c','type':'text','contacts':'7200300448','senderid':'VNSPDY','msg':message},
+                                           success: function(data) {
+                                              
+                                           }
+                                         });
+                                          // alert(message);
+                                          alert("Dinner Session has been Closed!!! SMS Sent Successfully!");    
+                                          var no_of_bils_eod = '';
+                                          var sess = 'EOD';
+                                          var breakfast = [];  
+                                          var lunch = []; 
+                                          var snacks = []; 
+                                          var dinner = [];                                          
+                                          $.grep(data[1], function (element, index) {
+                                            if (element.bill_id.toLowerCase().indexOf("b") >= 0){
+                                                 breakfast.push(element);
+                                            }  
+                                            if (element.bill_id.toLowerCase().indexOf("l") >= 0){
+                                                 lunch.push(element);
+                                            }   
+                                            if (element.bill_id.toLowerCase().indexOf("s") >= 0){
+                                                 snacks.push(element);
+                                            }   
+                                            if (element.bill_id.toLowerCase().indexOf("d") >= 0){
+                                                 dinner.push(element);
+                                            }     
+                                          });
+                                          var original_bills = breakfast[0].bill_id +' to '+ breakfast[breakfast.length-1].bill_id + ', ' + lunch[0].bill_id +' to '+ lunch[lunch.length-1].bill_id + ', '+ snacks[0].bill_id +' to '+ snacks[snacks.length-1].bill_id + ', '+ dinner[0].bill_id +' to '+ dinner[dinner.length-1].bill_id;
+                                          $.each(data[1], function(i){
+                                            amount += parseFloat(data[1][i].total_amount);
+                                          });
+                                          message_eod = sess+'\nDate :'+combined_date+';\nOriginal bills:'+original_bills+';\nTotal Amount Collection : Rs'+amount;
+                                          // alert(message_eod);
+                                         $.ajax({
+                                          type: 'GET',
+                                          url: 'http://bulksms.blackholesolution.com/app/smsapi/index.php',
+                                          data: {'key':'55113155e7e2c','type':'text','contacts':'7200300448','senderid':'VNSPDY','msg':message_eod},
+                                           success: function(data) {
+                                              
+                                           }
+                                         });
 
+                                }
+                                else if(status == "false"){
+                                    alert("Please close all the bills in previous session");
+                                }
+                                else if(status == ''){
+                                    alert("Not Yet created the bill for this session");
+                                }
+                             }
+                            });  
                                 }
                                 $.ajax({
                                     type: 'POST',
@@ -886,8 +987,6 @@
 
 
             } else {
-
-
                 $.ajax({
                     type: 'POST',
                     url: 'checking.php',
@@ -905,6 +1004,114 @@
                                 $('#' + sessionnextid).prop("checked", true);
                             }
 
+                        }
+                        else{
+                              $.ajax({
+                              type: 'POST',
+                              url: 'sms_sending.php',
+                              data: {'session':session},
+                              dataType:'json',
+                              success: function(data) {
+                                status = true;
+                                if (data == ''){
+                                  status = '';
+                                }
+                                $.each(data, function(i){
+                                  if(data[i].status == "open")  
+                                    status = false;
+                                });
+                                  if(status == "true"){
+                                      var d = new Date();
+                                      var month = new Array();
+                                      month[0] = "Jan";
+                                      month[1] = "Feb";
+                                      month[2] = "Mar";
+                                      month[3] = "Apr";
+                                      month[4] = "May";
+                                      month[5] = "Jun";
+                                      month[6] = "Jul";
+                                      month[7] = "Aug";
+                                      month[8] = "Sep";
+                                      month[9] = "Oct";
+                                      month[10] = "Nov";
+                                      month[11] = "Dec";
+                                      var n = month[d.getMonth()];
+                                      var lenth = data.length;
+                                      var date = data[0].orde_close_date;
+                                      var spilted_date = date.split('-');
+                                      var combined_date = spilted_date[2]+n+spilted_date[0];
+                                      var amount = 0.00;
+                                      $.each(data, function(i){
+                                        amount += parseFloat(data[i].total_amount);
+                                      });
+                                      if(session.toLowerCase() == 'l'){
+                                          var sess = 'Breakfast';
+                                          var no_of_bils = data[0].bill_id +'to'+data[lenth-1].bill_id;
+                                          var message = sess+'\nDate :'+combined_date+';\nNo of bills:'+no_of_bils+';\nAmount Collection : Rs'+amount;
+                                         $.ajax({
+                                          type: 'GET',
+                                          url: 'http://bulksms.blackholesolution.com/app/smsapi/index.php',
+                                          data: {'key':'55113155e7e2c','type':'text','contacts':'7200300448','senderid':'VNSPDY','msg':message},
+                                           success: function(data) {
+                                              
+                                           }
+                                         });
+                                          // alert(message);
+                                          alert("Breakfast Session has been Closed!!! SMS Sent Successfully!");
+                                      }else if(session.toLowerCase() == 's'){
+                                          var sess = 'Lunch';
+                                          var no_of_bils = data[0].bill_id +'to'+data[lenth-1].bill_id;
+                                          var message = sess+'\nDate :'+combined_date+';\nNo of bills:'+no_of_bils+';\nAmount Collection : Rs'+amount;
+                                         $.ajax({
+                                             type: 'GET',
+                                          url: 'http://bulksms.blackholesolution.com/app/smsapi/index.php',
+                                          data: {'key':'55113155e7e2c','type':'text','contacts':'7200300448','senderid':'VNSPDY','msg':message},
+                                           success: function(data) {
+                                              
+                                           }
+                                         });
+                                          // alert(message);
+                                          alert("Lunch Session has been Closed!!! SMS Sent Successfully!");
+                                      }
+                                      else if(session.toLowerCase() == 'd'){
+                                          var sess = 'Snacks';
+                                          var no_of_bils = data[0].bill_id +'to'+data[lenth-1].bill_id;
+                                          var message = sess+'\nDate :'+combined_date+';\nNo of bills:'+no_of_bils+';\nAmount Collection : Rs'+amount;
+                                         $.ajax({
+                                             type: 'GET',
+                                          url: 'http://bulksms.blackholesolution.com/app/smsapi/index.php',
+                                          data: {'key':'55113155e7e2c','type':'text','contacts':'7200300448','senderid':'VNSPDY','msg':message},
+                                           success: function(data) {
+                                              
+                                           }
+                                         });
+                                          // alert(message);
+                                          alert("Snacks Session has been Closed!!! SMS Sent Successfully!");
+                                      }else if(session.toLowerCase() == 'e'){
+                                         var sess = 'Dinner';
+                                         var no_of_bils = data[0].bill_id +'to'+data[lenth-1].bill_id;
+                                         var message = sess+'\nDate :'+combined_date+';\nNo of bills:'+no_of_bils+';\nAmount Collection : Rs'+amount;
+                                         $.ajax({
+                                             type: 'GET',
+                                          url: 'http://bulksms.blackholesolution.com/app/smsapi/index.php',
+                                          data: {'key':'55113155e7e2c','type':'text','contacts':'7200300448','senderid':'VNSPDY','msg':message},
+                                           success: function(data) {
+                                              
+                                           }
+                                         });
+                                         // alert(message);
+                                         alert("Dinner Session has been Closed!!! SMS Sent Successfully!");
+
+                                      }
+                                }
+                                else if(status == "false"){
+                                    alert("Please close all the bills in previous session");
+                                }
+                                else if(status == ''){
+                                    alert("Not Yet created the bill for this session");
+                                }
+                          }
+                         });
                         }
                         $.ajax({
                             type: 'POST',
