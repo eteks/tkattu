@@ -946,14 +946,14 @@ function Save_bill(table_id,sup_name,cart_id, bill_id, ordertype, accountsession
             $("#divmiddlecontent").html(data);
             $("#bill_row").hide();
             if (chkpc == 1) {
-                print_bill(table_id, cart_id, bill_id, accountsession);
+                print_bill(table_id, cart_id, bill_id, accountsession,ordertype);
                 close_bill('close_cancel', cart_id, table_id);
             }
         }
     });
 }
 
-function print_bill(table_id, card_id, bill_id, accountsession) {
+function print_bill(table_id, card_id, bill_id, accountsession,ordertype) {
 
 
     //document.getElementById('bill_row').style.display = 'none';
@@ -961,7 +961,7 @@ function print_bill(table_id, card_id, bill_id, accountsession) {
     $.ajax({
         type: 'GET',
         url: 'barBillprint.php',
-        data: 'table_id='+table_id+'&card_id='+card_id+'&bill_id='+bill_id+'&accountsession='+accountsession,
+        data: 'ordertype='+ordertype+'table_id='+table_id+'&card_id='+card_id+'&bill_id='+bill_id+'&accountsession='+accountsession,
         success: function(data) {
 
 
@@ -973,7 +973,16 @@ function print_bill(table_id, card_id, bill_id, accountsession) {
 
 function print_nocashbill(chairs, card_id, accountsession) {
     document.getElementById('bill_row').style.display = 'none';
-    window.open("nocashbillprint.php?chairs=" + chairs + "&card_id=" + card_id + "&accountsession=" + accountsession, '_blank');
+    // window.open("nocashbillprint.php?chairs=" + chairs + "&card_id=" + card_id + "&accountsession=" + accountsession, '_blank');
+    $.ajax({
+            type: 'POST',
+            url: 'nocashbillprint.php',
+            data: "chairs=" + chairs + "&card_id=" + card_id + "&accountsession=" + accountsession,
+            success: function(data) {
+
+
+            }
+        });
 }
 
 function open_bill(cart_id, chairs, ordertype) {

@@ -30,6 +30,10 @@
 	db_query("Update ".TABLE_HMS_BILL_ID." SET bill_id=$lstbill_id");
 	$account_bill ="SELECT * FROM ".TABLE_HMS_RESTAURANT_ACCOUNT_DETAILS." WHERE account_card_id = '$cardid' AND tabel_id ='".$chairslist."' $wherecon";
 	$account_bill_query = db_query($account_bill);
+	if($ordertype=='dine')
+		$bill_format = "Invoice";
+	else
+		$bill_format = "Invoice Parcel";		
 	// printer configuration
 	require 'printer/autoload.php';
 	use Mike42\Escpos\Printer;
@@ -46,6 +50,7 @@
 		$printer -> selectPrintMode(Printer::MODE_EMPHASIZED); // Font bold Mode selection printer
 		$printer -> setJustification(Printer::JUSTIFY_CENTER);// Printe center
 		$hotel_name = stripslashes($parameterEntry_values["hms_hotel_name"]);
+		$printer -> text($bill_format."\n");
 		$printer -> text($hotel_name."\n"); // print hotel name
 		$printer -> text(stripslashes($parameterEntry_values["hms_address1"]).stripslashes( $parameterEntry_values["hms_address2"])."\n");// print address
 		$printer -> text(stripslashes( $parameterEntry_values["hms_city"]).','.stripslashes( $parameterEntry_values["hms_state"]).'-'.stripslashes( $parameterEntry_values["hms_pincode"])."\n");// printaddress

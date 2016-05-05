@@ -27,7 +27,7 @@ define('DIR_WS_INST_FORM_IMG_UPLOADS', DIR_WS_UPLOADS . 'form_images/');
 
 define('DB_SERVER', 'localhost');//192.168.1.119
 define('DB_SERVER_USERNAME','root'); //bgi
-define('DB_SERVER_PASSWORD',''); //bgi
+define('DB_SERVER_PASSWORD','root'); //bgi
 define('DB_DATABASE', 'thalapakattu');
 define('USE_PCONNECT', 'false'); // use persisstent connections?
 define('LANGUAGE', 1);

@@ -423,7 +423,8 @@
     
         
         $('.form2 .custom-combobox-input').on("focusin", callcategorynameslist);
-        $('.form2 .custom-combobox-input').on("keyup", callcategorynameslist);
+        $('.form2 .custom-combobox-input').on("keyup", callcategorynameslist);
+
         
         
         $('#ui-id-1').on('click', 'li', function() {
@@ -1125,8 +1126,17 @@
                         var x, y;
                         x = 900;
                         y = 700;
-                        var url_is = "separatebill.php?action=cancelbill&tableno=" + tableno + "&ordertype=" + ordertype + "&chairs=" + chairs + "&cartid=" + cartid;
-                        window.open(url_is, this.target, 'width=' + x + ',height=' + y + ',left=5,top=5,scrollbars=1,resizable=yes');
+                        // var url_is = "separatebill.php?action=cancelbill&tableno=" + tableno + "&ordertype=" + ordertype + "&chairs=" + chairs + "&cartid=" + cartid;
+                        // window.open(url_is, this.target, 'width=' + x + ',height=' + y + ',left=5,top=5,scrollbars=1,resizable=yes');
+                        $.ajax({
+                            type: 'POST',
+                            url: 'separatebill.php',
+                            data: "action=cancelbill&tableno=" + tableno + "&ordertype=" + ordertype + "&chairs=" + chairs + "&cartid=" + cartid,
+                            success: function(data) {
+
+
+                            }
+                        });
                     }
 
                 }
@@ -1159,9 +1169,17 @@
             var x, y;
             x = 900;
             y = 700;
-            var url_is = "separatebill.php?action=cancelitem&tableno=" + tableno + "&ordertype=" + ordertype + "&chairs=" + chairs + "&cartid=" + cartid + "&chkitems=" + chkitems + '&editstatus=' + editstatus;
-            window.open(url_is, this.target, 'width=' + x + ',height=' + y + ',left=5,top=5,scrollbars=1,resizable=yes');
+            // var url_is = "separatebill.php?action=cancelitem&tableno=" + tableno + "&ordertype=" + ordertype + "&chairs=" + chairs + "&cartid=" + cartid + "&chkitems=" + chkitems + '&editstatus=' + editstatus;
+            // window.open(url_is, this.target, 'width=' + x + ',height=' + y + ',left=5,top=5,scrollbars=1,resizable=yes');
+            $.ajax({
+                type: 'POST',
+                url: 'separatebill.php',
+                data: "action=cancelitem&tableno=" + tableno + "&ordertype=" + ordertype + "&chairs=" + chairs + "&cartid=" + cartid + "&chkitems=" + chkitems + '&editstatus=' + editstatus,
+                success: function(data) {
 
+
+                }
+            });
         });
 
         $('.pchk').on('click', function() {
