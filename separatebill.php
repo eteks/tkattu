@@ -46,7 +46,7 @@
   			db_query("INSERT INTO hms_order_qty_flow SET bill_id='".$innerfetch['bill_id']."',itemcancel='".$innerfetch['itemcancel']."',last_cancel_quantity='".$innerfetch['itemcancel']."',depart_id='".$innerfetch['depart_id']."',order_cart_id='".$innerfetch['order_cart_id']."', menuid='".$innerfetch['menuid']."',order_id='".$innerfetch['order_id']."', order_quantity='".$finalqty."', cancel_status=1, parcel_status='".$fetch['parcel_status']."'");
   			db_query("UPDATE " .TABLE_HMS_RESTAURANT_ORDER_DETAILS." SET last_cancel_quantity=0 WHERE order_id='$orderidval' ");
 		}
-		$wherecon = " AND cancel_status=1 AND depart_status=0";
+		$wherecon = " AND cancel_status=1 AND depart_status=0 AND order_id = '$orderidval' ";
 		$bill_format = "KOT Cancel";
 	}
 	else if($action=='deptbill'){
