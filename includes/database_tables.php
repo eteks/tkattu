@@ -59,4 +59,5 @@ define('TABLE_HMS_UNIT_ENTRY','hms_unit_entry');
 define('TABLE_HMS_BILL_ID','hms_bill_id');
 define('TABLE_HMS_TABLE_DETAILS','hms_table_details');
 define('TABLE_HMS_RESTAURANT_ORDER_SESSION','hms_restaurant_order_session');
+define('PRINTER_IP', '192.168.2.100');
 ?>

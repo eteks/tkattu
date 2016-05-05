@@ -80,7 +80,7 @@
 	require 'printer/autoload.php';
 	use Mike42\Escpos\Printer;
 	use Mike42\Escpos\PrintConnectors\NetworkPrintConnector;
-	$connector = new NetworkPrintConnector("192.168.2.100", 9100);
+	$connector = new NetworkPrintConnector(PRINTER_IP, 9100);
 	
 	$sel_separatebill  ="SELECT order_id,sum(order_quantity) as order_quantity,bill_id,order_cart_id,last_cancel_quantity, parcel_status,menuid FROM hms_order_qty_flow WHERE depart_id=1 $wherecon AND order_cart_id = '$cartid' group by menuid order by order_id ASC";
 	$rows_separatebill = db_query($sel_separatebill);
@@ -121,7 +121,9 @@
        
 		$printer -> text("D/T : ".$datetime."\n") ;
 		if($ordertype=='dine'){
-			$printer -> text("S/I : ".$supplier." Dept : KOT\n") ;
+			$printer -> text("S/I : ".$supplier." Dept : KOT".$cartid."\n") ;
+		}else{
+			$printer -> text("Dept : KOT".$cartid."\n") ;
 		}
 		$printer -> text("------------------------------------------\n");
 

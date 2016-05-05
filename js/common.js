@@ -633,7 +633,9 @@ $(document).ready(function(){
 	                        $('#noofpersons').val('');
 	                        
 	                        $('.getcategory').prop("checked", false);
-	                        $('#tables').focus();
+	                        
+	                        $('#ordertype').focus();
+	                        
 	                    } else
 	                        alert("Please Generate the Order Entry");
 	                }
@@ -685,7 +687,7 @@ $(document).ready(function(){
                	$('.classchk:first').focus().select();
                 event.preventDefault();
             }
-            if (event.ctrlKey && (event.which == 90)) { // ctrl +  = Cancel item
+            if (event.ctrlKey && (event.which == 90)) { // ctrl + Z= Cancel item
                	var fields = $("input[name='checkbox[]']:checked").serializeArray();
                	
 	            if (fields.length == 0) {
